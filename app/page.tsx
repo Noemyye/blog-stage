@@ -1,8 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import Header from "@/components/Header";
-import fs from 'fs';
-import path from 'path';
 import WeekList from '@/components/WeekList';
 
 export default function Home() {

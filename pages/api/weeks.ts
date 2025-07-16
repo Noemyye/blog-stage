@@ -9,6 +9,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const mdFiles = files.filter((file) => file.endsWith('.md'));
     res.status(200).json(mdFiles);
   } catch (error) {
-    res.status(500).json({ error: 'Erreur lors de la lecture du dossier.' });
+    console.error('Erreur lecture dossier:', error);
+    res.status(500).json({ error: 'Erreur lecture dossier.' });
   }
 }

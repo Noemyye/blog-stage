@@ -16,17 +16,28 @@ const WeekList: React.FC = () => {
   }, []);
 
   return (
-    <section className="mt-6 mb-16 flex flex-col items-center lg:mb-12 lg:flex-row lg:justify-between top-0 sticky">
-      <div className="text-pretty mt-5 text-center text-xl flex gap-20 underline decoration-rose-200 decoration-3 underline-offset-4">
-        <ul>
-          {fileNames.map((name, index) => (
-            <li key={index}>
-              <Link href={`/weeks/${name.replace('.md', '')}`}>{name}</Link>
+    <div className="mt-5">
+      <ul className="flex flex-wrap gap-4">
+        {fileNames.map((name, index) => {
+          const slug = name.replace('.md', '');
+          const formatted = slug.replace(/semaine(\d+)/i, (_, n) => `Semaine ${n}`);
+
+          return (
+            <li
+              key={index}
+              className="w-[calc(25%-1rem)] aspect-square"
+            >
+              <Link
+                href={`/weeks/${slug}`}
+                className="block w-full h-full text-center bg-rose-100 hover:bg-rose-200 text-rose-900 font-semibold rounded-xl shadow transition duration-200 flex items-center justify-center"
+              >
+                {formatted}
+              </Link>
             </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+          );
+        })}
+      </ul>
+    </div>
   );
 };
 
