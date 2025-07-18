@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-const WeekList: React.FC = () => {
+export default function WeekList(){
   const [fileNames, setFileNames] = useState<string[]>([]);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const WeekList: React.FC = () => {
       const data = await res.json();
       setFileNames(data);
     };
-
+    
     fetchFiles();
   }, []);
 
@@ -28,7 +28,7 @@ const WeekList: React.FC = () => {
               className="w-[calc(25%-1rem)] aspect-square"
             >
               <Link
-                href={`/weeks/${slug}`}
+                href={`/articles/${slug}`}
                 className="block w-full h-full text-center bg-rose-100 hover:bg-rose-200 text-rose-900 font-semibold rounded-xl shadow transition duration-200 flex items-center justify-center"
               >
                 {formatted}
@@ -41,4 +41,4 @@ const WeekList: React.FC = () => {
   );
 };
 
-export default WeekList;
+

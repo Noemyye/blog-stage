@@ -4,10 +4,6 @@ export default function Header() {
   return (
     <section
       className="sticky top-0 z-50 bg-white"
-      style={{ 
-        // optionnel, pour éviter que la hauteur change avec scroll
-        minHeight: '4rem', // ou la hauteur que tu veux fixe
-      }}
     >
       <div className="container mx-auto flex flex-col items-center justify-between py-4 px-6 lg:flex-row">
         <h1 className="text-balance text-6xl font-bold leading-tight tracking-tighter lg:pr-8 lg:text-8xl whitespace-nowrap">

@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 
-export default function WeekPage({ content, metadata }) {
+export default function ArticlePage({ content, metadata }) {
   return (
     <article className="prose mx-auto p-6">
       <h1>{metadata.title}</h1>
