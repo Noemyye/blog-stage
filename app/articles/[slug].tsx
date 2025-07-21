@@ -1,43 +1,21 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
+import { getArticleBySlug, getAllArticleSlugs } from '@/lib/getArticles'
+import { notFound } from 'next/navigation'
+import { MDXRemote } from 'next-mdx-remote/rsc'
 
-export default function ArticlePage({ content, metadata }) {
+export async function generateStaticParams() {
+  const slugs = getAllArticleSlugs()
+  return slugs.map((slug) => ({ slug }))
+}
+
+export default function ArticlePage({ params }: { params: { slug: string } }) {
+  const article = getArticleBySlug(params.slug)
+  if (!article) return notFound()
+
   return (
-    <article className="prose mx-auto p-6">
-      <h1>{metadata.title}</h1>
-      <p><em>{metadata.date}</em></p>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+    <article className="prose mx-auto p-8">
+      <h1>{article.frontmatter.title}</h1>
+      <p className="text-sm text-gray-500">{article.frontmatter.date}</p>
+      <MDXRemote source={article.content} />
     </article>
-  );
-}
-
-export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join(process.cwd(), 'data'));
-  const paths = files
-    .filter(name => name.endsWith('.md'))
-    .map(name => ({
-      params: { slug: name.replace('.md', '') },
-    }));
-
-  return { paths, fallback: false };
-}
-
-export async function getStaticProps({ params }) {
-  const filePath = path.join(process.cwd(), 'data', `${params.slug}.md`);
-  const fileContent = fs.readFileSync(filePath, 'utf-8');
-  const { data: metadata, content: markdownContent } = matter(fileContent);
-
-  const processedContent = await remark()
-    .use(html)
-    .process(markdownContent);
-
-  return {
-    props: {
-      content: processedContent.toString(),
-      metadata,
-    },
-  };
+  )
 }

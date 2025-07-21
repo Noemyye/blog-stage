@@ -1,44 +1,51 @@
 "use client"
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
+import { useEffect, useState } from "react"
+import Link from "next/link"
+import Image from "next/image"
 
-export default function WeekList(){
-  const [fileNames, setFileNames] = useState<string[]>([]);
+export default function WeekList() {
+  const [fileNames, setFileNames] = useState<string[]>([])
 
   useEffect(() => {
     const fetchFiles = async () => {
-      const res = await fetch('/api/weeks');
-      const data = await res.json();
-      setFileNames(data);
-    };
-    
-    fetchFiles();
-  }, []);
+      const res = await fetch("/api/weeks")
+      const data = await res.json()
+      setFileNames(data)
+    }
+    fetchFiles()
+  }, [])
 
   return (
     <div className="mt-5">
-      <ul className="flex flex-wrap gap-4">
+      <div className="text-7xl font-bold py-10">Les posts</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-28">
         {fileNames.map((name, index) => {
-          const slug = name.replace('.md', '');
-          const formatted = slug.replace(/semaine(\d+)/i, (_, n) => `Semaine ${n}`);
-
+          const slug = name.replace(".md", "")
           return (
-            <li
-              key={index}
-              className="w-[calc(25%-1rem)] aspect-square"
-            >
+            <div key={index} className="flex flex-col gap-4">
               <Link
                 href={`/articles/${slug}`}
-                className="block w-full h-full text-center bg-rose-100 hover:bg-rose-200 text-rose-900 font-semibold rounded-xl shadow transition duration-200 flex items-center justify-center"
+                className="block rounded-xl shadow overflow-hidden aspect-5/3 group" 
               >
-                {formatted}
+                <Image
+                  alt={slug}
+                  width={500} 
+                  height={300} 
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  src={`/img/pic${index + 1}.png`}
+                />
               </Link>
-            </li>
-          );
+
+              {/* Contenu temporaire, à remplacer par du contenu dynamique plus tard */}
+              <div className="text-3xl text-gray-800">Titre de l'article</div>
+              <div className="text-md text-rose-400">Date à insérer</div>
+              <div className="text-xl text-gray-700">
+                Petit extrait de l'article ou introduction (à venir si parsing de frontmatter).
+              </div>
+            </div>
+          )
         })}
-      </ul>
+      </div>
     </div>
-  );
-};
-
-
+  )
+}

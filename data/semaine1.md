@@ -1,3 +1,9 @@
+---
+title: Ma première semaine chez Haryon
+date: 2025-07-01
+description: Première semaine d'intégration, Linux, CSS et Git.
+---
+
 # 🗓️ Semaine 1 – Premiers pas dans l’entreprise
 
 ## 🧑‍💻 Mon arrivée dans l’équipe
