@@ -1,6 +1,14 @@
 'use client'
-
+import { FaGithub, FaIdCardAlt, FaMousePointer, FaReact, FaRegWindowRestore, FaRoute, FaSlack, FaTerminal } from "react-icons/fa";
 import Image from "next/image"
+import { BsCalendar2Week } from "react-icons/bs";
+import { GrNetwork, GrUbuntu } from "react-icons/gr";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiAsana, SiGooglemeet, SiNextdotjs, SiPrisma, SiShadcnui } from "react-icons/si";
+import { VscVscodeInsiders } from "react-icons/vsc";
+import { MdWork } from "react-icons/md";
+import { FaCubesStacked } from "react-icons/fa6";
+import { GiPalmTree } from "react-icons/gi";
 
 export default function Page() {
     const equipe = [           
@@ -10,13 +18,12 @@ export default function Page() {
                 ["Robin Zmuda", "Technical Lead Cyber", "Employé"],
                 ["Mickael Desclaux-Arramond", "Dev Fullstack", "Alternant"],
                 ["Sangmin Shim", "Dev Fullstack", "Alternant"],
-                ["Nathan V", "Dev Cyber", "Alternant"],
+                ["Nathan Vacher", "Dev Cyber", "Alternant"],
                 ["Hugo Cot", "Dev Cyber", "Alternant"],
                 ["Yani Madebos", "UX Designer", "Alternant"],
-                ["Moi", "Dev Fullstack", "Stagiaire"],
               ]
   return (
-    <div className="flex flex-col gap-15">
+    <div className="flex flex-col gap-10">
       <div className="text-7xl font-bold">Présentation de l'entreprise</div>
 
       <section className="flex justify-between">
@@ -40,11 +47,11 @@ export default function Page() {
       </section>
 
        <section>
-        <h2 className="text-3xl font-semibold text-rose-300 mb-4">🧑‍💻 Organisation interne</h2>
+        <h2 className="text-3xl font-semibold text-rose-300 mb-4 flex items-center gap-2"><BsCalendar2Week /> Organisation interne</h2>
 
         <div className="space-y-6 text-lg">
           <div>
-            <h3 className="font-semibold">📦 Les pôles :</h3>
+            <h3 className="font-semibold flex items-center gap-2"><FaTerminal /> Les pôles :</h3>
             <ul className="list-disc pl-6">
               <li>Développement Fullstack</li>
               <li>Développement Cyber</li>
@@ -54,12 +61,14 @@ export default function Page() {
           </div>
 
           <div>
-            <h3 className="font-semibold">📁 Méthodes de travail :</h3>
+            <h3 className="font-semibold flex items-center gap-2"><FaRegWindowRestore /> Méthodes de travail :</h3>
             <ul className="list-disc pl-6">
               <li>Travail en <strong>Sprint</strong> de 3 semaines</li>
               <li>Réunions : daily meetings, weekly, sprint review</li>
               <li>Code review, pair programming, feedback continu</li>
               <li>Suivi RH avec points réguliers pendant le stage</li>
+              <li>Outils :</li>
+              <li className="flex items-center gap-2 "> <SiAsana /><FaSlack /><VscVscodeInsiders /><FaGithub/><SiGooglemeet /></li>
             </ul>
           </div>
         </div>
@@ -67,7 +76,7 @@ export default function Page() {
 
       {/* Équipe */}
       <section>
-        <h2 className="text-3xl font-semibold text-rose-300 mb-4">👥 L'équipe</h2>
+        <h2 className="text-3xl font-semibold text-rose-300 mb-4 flex gap-2 items-center"><FaIdCardAlt /> L'équipe</h2>
 
         <div className="overflow-x-auto">
           <table className="min-w-full table-auto border border-rose-200">
@@ -93,15 +102,54 @@ export default function Page() {
 
       {/* Environnement de travail */}
       <section>
-        <h2 className="text-3xl font-semibold text-rose-300 mb-4">🧑‍🔧 Mon environnement de travail</h2>
-        <ul className="list-disc pl-6 text-lg space-y-2">
-          <li>Bureau à Bordeaux avec une ambiance bienveillante</li>
-          <li>Télétravail ponctuel possible selon les jours</li>
-          <li>Environnement de développement sous Linux (Ubuntu)</li>
-          <li>PC de bureau configuré avec outils pro (VSCode, Git, zsh...)</li>
-          <li>Stack utilisée : <strong>React, Next.js, Prisma, tRPC, Tailwind CSS, shadcn/ui, WebSocket</strong></li>
+        <h2 className="text-3xl font-semibold text-rose-300 mb-4 flex gap-2 items-center">
+          <FaMousePointer /> Mon environnement de travail
+        </h2>
+        <ul className="list-disc text-xl pl-6 space-y-2">
+          <li className="flex gap-2 items-center">
+            <FaRoute className="size-6" /> Bureau à la cité du numérique, Bègles (2 Rue Marc Sangnier)
+          </li>
+          <li className="flex gap-2 items-center">
+            <MdWork className="size-6"/> Télétravail ponctuel possible selon les jours
+          </li>
+          <li className="flex gap-2 items-center">
+            <GrUbuntu className="size-6" /> Environnement de développement sous Linux (Ubuntu)
+          </li>
+          <li className="flex gap-2 items-center">
+            <VscVscodeInsiders className="size-6" /> PC de bureau configuré avec outils pro (VSCode, Git, Slack...)
+          </li>
+          <li className="flex gap-2 items-center">
+            <FaCubesStacked className="size-6" /> Stack utilisée :
+          </li>
+          <ul className="pl-8 space-y-1 list-none">
+            <li className="flex gap-2 items-center">
+              <FaReact /> React
+            </li>
+            <li className="flex gap-2 items-center">
+              <SiNextdotjs /> Next.js
+            </li>
+            <li className="flex gap-2 items-center">
+              <SiPrisma /> Prisma
+            </li>
+            <li className="flex gap-2 items-center">
+              <GrNetwork /> tRPC
+            </li>
+            <li className="flex gap-2 items-center">
+              <RiTailwindCssFill /> Tailwind CSS
+            </li>
+            <li className="flex gap-2 items-center">
+              <SiShadcnui /> shadcn/ui
+            </li>
+            <li className="flex gap-2 items-center">
+              <GrNetwork /> WebSocket
+            </li>
+            <li className="flex gap-2 items-center">
+              <GiPalmTree /> TanStack Table
+            </li>
+          </ul>
         </ul>
       </section>
+
     </div>
   )
 }
