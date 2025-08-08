@@ -1,10 +1,12 @@
 import Link from "next/link"
+import ParticleBackground from "./particle-background"
 
 export default function Header() {
   return (
     <section
       className="sticky top-0 z-50 bg-white"
     >
+      <ParticleBackground>
       <div className="container mx-auto flex flex-col items-center justify-between py-10 px-18 lg:flex-row">
         <Link href={'/'} className="text-balance text-6xl font-bold leading-tight tracking-tighter lg:pr-8 lg:text-8xl whitespace-nowrap">
           Blog<span className="text-rose-200">.</span>
@@ -30,6 +32,7 @@ export default function Header() {
           </Link>
         </nav>
       </div>
+      </ParticleBackground>
     </section>
   )
 }
