@@ -164,7 +164,15 @@ export default function Page() {
 
             <CardContent className="grid sm:grid-cols-2 gap-6">
               {[
-                { icon: FaRoute, text: "Bureau à la cité du numérique, Bègles (2 Rue Marc Sangnier)" },
+                { icon: FaRoute, text: `Bureau à 
+                ${<a
+                  href="https://www.google.com/maps/place/Cit%C3%A9+Num%C3%A9rique/@44.8130463,-0.5540888,17z/data=!3m1!4b1!4m6!3m5!1s0xd552657f96df915:0x7df72cfff31ae12f!8m2!3d44.8130463!4d-0.5540888!16s%2Fg%2F11b633y8gl?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                La cité du Numérique, Bègles (2 Rue Marc Sangnier)
+                </a>}` },
                 { icon: MdWork, text: "Télétravail ponctuel possible selon les jours" },
                 { icon: GrUbuntu, text: "Environnement de développement sous Linux (Ubuntu)" },
                 { icon: VscVscodeInsiders, text: "PC de bureau configuré avec outils pro (VSCode, Git, Slack...)" },
