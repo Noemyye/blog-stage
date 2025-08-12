@@ -19,8 +19,7 @@ Cela m’a permis d’avoir une vue d’ensemble sur les rôles de chacun et l�
 
 ## 🖥️ Mise en place de l’environnement de travail
 
-On m’a attribué un **poste de travail sous Linux**, ce qui m’a permis de découvrir un environnement professionnel souvent recommandé pour le développement.  
-Même si je n’avais jamais vraiment travaillé sous Linux de manière approfondie auparavant, je connaissais quelques bases, ce qui m’a permis de ne pas être totalement perdue.
+On m’a attribué un **poste de travail sous Linux**, ce qui m’a permis de découvrir un environnement professionnel souvent recommandé pour le développement.
 
 J’ai dû m’habituer à plusieurs aspects techniques :
 - Terminal Bash et commandes de base (naviguer dans l’arborescence, installer des paquets, etc.),
@@ -55,14 +54,13 @@ En entreprise, j’ai appris à :
 - Créer et travailler sur des **branches dédiées** à des fonctionnalités ou des bugs,
 - Soumettre des **pull requests** (PR),
 - Comprendre l’importance des **code reviews** avec des commentaires constructifs,
-- Gérer les conflits de fusion (**merge conflicts**),
 - Ne **pas pousser directement sur `main`**, mais respecter un système de **releases** et de validations en amont.
 
 C’est un aspect très formateur, car cela m’a permis de mieux comprendre **la collaboration en équipe sur un même codebase**, tout en garantissant la stabilité du produit.
 
 ## 🍽️ Un moment de convivialité
 
-Le jeudi de ma première semaine, un autre stagiaire terminait son stage. Pour l’occasion, **Léo, le CTO, nous a tous invités au restaurant**.  
+Le jeudi de ma première semaine **Léo, le CTO, nous a tous invités au restaurant**.  
 Ce moment informel m’a permis de :
 - Rencontrer mes collègues dans un autre contexte,
 - Mettre un visage sur certains noms que je n’avais croisés que virtuellement ou rapidement au bureau,

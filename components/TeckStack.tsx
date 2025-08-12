@@ -59,7 +59,7 @@ export default function TechStack() {
             {tech.skills.map(({ name, icon }) => (
               <span
                 key={name}
-                className="inline-flex items-center gap-2 rounded-md bg-rose-300/20 px-2 py-1 text-sm font-medium text-primary ring-1 ring-inset ring-rose-400/30"
+                className="inline-flex items-center gap-2 rounded-md bg-teal-300/20 px-2 py-1 text-sm font-medium text-primary ring-1 ring-inset ring-teal-400/30 transition-all duration-200 hover:scale-105"
               >
                 {icon} {name}
               </span>

@@ -3,7 +3,7 @@
 ## 🧵 Finalisation de la timeline CSS
 
 En début de semaine 5, j’ai terminé la mise en forme CSS de la **frise chronologique** commencée précédemment.  
-J’ai particulièrement soigné l’aspect visuel avec **Tailwind CSS**, pour offrir un rendu clair, responsive et esthétique. Le travail sur ce composant m’a permis de renforcer mes compétences en layout CSS avancé, notamment sur les grilles, les pseudo-éléments et l’espacement dynamique.
+J’ai particulièrement soigné l’aspect visuel avec **Tailwind CSS**, pour offrir un rendu clair, responsive et esthétique. Le travail sur ce composant m’a permis de renforcer mes compétences en layout CSS avancé, notamment sur les grilles, les pseudo-éléments et l’espacement dynamique. Pas grand chose non plus car j'étais parti en pleine semaine à l'armée.
 
 ---
 
@@ -11,15 +11,12 @@ J’ai particulièrement soigné l’aspect visuel avec **Tailwind CSS**, pour o
 
 Une nouvelle tâche m’a ensuite été confiée : afficher les **tags associés à un site** et permettre à l’utilisateur de filtrer des éléments en fonction de ces tags.
 
-- **Semaine 5** : mise en place du composant frontend
-- **Semaine 6** : tentative d’implémentation du système global de tags
+- **Semaine 5** : mise en place du composant niveau frontend
+- **Semaine 6** : tentative d’implémentation du système global de tags avec filtre
 
 Je voulais notamment :
 - récupérer les tags à travers différentes fenêtres du site,
-- les afficher sans doublons dans une vue de type répertoire ou index.
-
-👉 Un **blocage technique** est survenu autour de **CouchDB**, la base NoSQL utilisée. Je n’arrivais pas à dédupliquer correctement les tags stockés, sans comprendre l’origine du comportement.  
-Après vérification avec les autres développeurs, il s’est avéré que ce souci n’était pas de mon côté.
+- les afficher plus ou moins voyant par rapport à la sélection.
 
 Je me suis donc recentrée sur :
 - l’aspect **CSS des tags** (affichage, interactions),
@@ -29,7 +26,7 @@ Je me suis donc recentrée sur :
 
 ## 📊 Dashboard & graphique avec shadcn + IA v0
 
-En fin de semaine 6, une nouvelle tâche m’a été confiée : la création d’un **dashboard dynamique** contenant plusieurs graphiques.
+En fin de semaine 6, une nouvelle tâche m’a été confiée : la création d’un **dashboard dynamique** contenant plusieurs graphiques comme des diagrammes circulaires, des graphs en ligne.
 
 - J’ai utilisé la bibliothèque **shadcn/ui** et ses composants graphiques (cards, grids, etc.).
 - Grâce à l’outil **v0** (IA générative connectée à shadcn/ui), j’ai pu :
@@ -57,7 +54,6 @@ Tout au long de ces deux semaines, j’ai continué à travailler sur le dévelo
 
 - 🎨 Finalisation d’un composant visuel (timeline)
 - 🏷️ Gestion de tags filtrables avec de la logique frontend
-- 🛠️ Premier vrai bug backend (CouchDB) confronté
 - 📊 Création rapide d’un dashboard responsive avec shadcn + IA
 - 🚀 Avancement continu sur le blog
 
