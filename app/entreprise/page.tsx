@@ -9,6 +9,7 @@ import { VscVscodeInsiders } from "react-icons/vsc";
 import { MdWork } from "react-icons/md";
 import { FaCubesStacked } from "react-icons/fa6";
 import { GiPalmTree } from "react-icons/gi";
+import TechStack from "@/components/TeckStack";
 
 export default function Page() {
     const equipe = [           
@@ -47,7 +48,7 @@ export default function Page() {
       </section>
 
        <section>
-        <h2 className="text-3xl font-semibold text-rose-300 mb-4 flex items-center gap-2"><BsCalendar2Week /> Organisation interne</h2>
+        <h2 className="text-3xl font-semibold text-rose-200 mb-4 flex items-center gap-2"><BsCalendar2Week /> Organisation interne</h2>
 
         <div className="space-y-6 text-lg">
           <div>
@@ -67,8 +68,6 @@ export default function Page() {
               <li>Réunions : daily meetings, weekly, sprint review</li>
               <li>Code review, pair programming, feedback continu</li>
               <li>Suivi RH avec points réguliers pendant le stage</li>
-              <li>Outils :</li>
-              <li className="flex items-center gap-2 "> <SiAsana /><FaSlack /><VscVscodeInsiders /><FaGithub/><SiGooglemeet /></li>
             </ul>
           </div>
         </div>
@@ -118,36 +117,12 @@ export default function Page() {
           <li className="flex gap-2 items-center">
             <VscVscodeInsiders className="size-6" /> PC de bureau configuré avec outils pro (VSCode, Git, Slack...)
           </li>
-          <li className="flex gap-2 items-center">
-            <FaCubesStacked className="size-6" /> Stack utilisée :
-          </li>
-          <ul className="pl-8 space-y-1 list-none">
-            <li className="flex gap-2 items-center">
-              <FaReact /> React
-            </li>
-            <li className="flex gap-2 items-center">
-              <SiNextdotjs /> Next.js
-            </li>
-            <li className="flex gap-2 items-center">
-              <SiPrisma /> Prisma
-            </li>
-            <li className="flex gap-2 items-center">
-              <GrNetwork /> tRPC
-            </li>
-            <li className="flex gap-2 items-center">
-              <RiTailwindCssFill /> Tailwind CSS
-            </li>
-            <li className="flex gap-2 items-center">
-              <SiShadcnui /> shadcn/ui
-            </li>
-            <li className="flex gap-2 items-center">
-              <GrNetwork /> WebSocket
-            </li>
-            <li className="flex gap-2 items-center">
-              <GiPalmTree /> TanStack Table
-            </li>
-          </ul>
         </ul>
+      </section>
+
+      <section>
+         <h2 className="flex items-center text-rose-300 justify-center text-4xl font-bold gap-2 mb-4"> <FaCubesStacked className=""/> Stack technique</h2>
+          <TechStack />
       </section>
 
     </div>

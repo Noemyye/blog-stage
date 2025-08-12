@@ -16,8 +16,8 @@ export default function WeekList() {
   }, [])
 
   return (
-    <div className="mt-5">
-      <div className="text-7xl font-bold py-10">Les posts</div>
+    <div>
+      <div className="text-7xl font-bold pb-10">Les posts</div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-28">
         {fileNames.map((name, index) => {
           const slug = name.replace(".md", "")
@@ -38,7 +38,7 @@ export default function WeekList() {
 
               {/* Contenu temporaire, à remplacer par du contenu dynamique plus tard */}
               <div className="text-3xl text-gray-800">Titre de l'article</div>
-              <div className="text-md text-rose-400">Date à insérer</div>
+              <div className="text-md text-rose-300 font-bold">Date à insérer</div>
               <div className="text-xl text-gray-700">
                 Petit extrait de l'article ou introduction (à venir si parsing de frontmatter).
               </div>
