@@ -3,36 +3,36 @@ import ParticleAnimation from "./ParticleAnimation"
 
 export default function Header() {
   return (
-    <section
-      className="sticky top-0 z-50 bg-white"
-    >
+    <section className="sticky top-0 z-50 bg-white">
       <ParticleAnimation>
-       
-      <div className="container mx-auto flex flex-col items-center justify-between pb-6 pt-7 px-18 lg:flex-row">
-        <Link href={'/'} className="text-balance text-6xl font-bold leading-tight tracking-tighter lg:pr-8 lg:text-8xl whitespace-nowrap">
-          Blog<span className="text-rose-200">.</span>
-        </Link>
-        <nav className="text-pretty mt-5 flex flex-wrap justify-center gap-10 text-xl underline decoration-rose-200 decoration-3 underline-offset-4 lg:mt-0">
+        <div className="container mx-auto flex flex-col items-center justify-between pb-4 md:pb-6 pt-4 md:pt-7 px-4 md:px-8 lg:px-18 lg:flex-row">
           <Link
-            href="/entreprise"
-            className="transition-transform duration-300 ease-in-out hover:text-rose-200 hover:scale-125"
+            href={"/"}
+            className="text-balance text-3xl md:text-5xl lg:text-6xl xl:text-8xl font-bold leading-tight tracking-tighter lg:pr-8 whitespace-nowrap"
           >
-            Entreprise
+            Blog<span className="text-rose-200">.</span>
           </Link>
-          <Link
-            href="/articles"
-            className="transition-transform duration-300 ease-in-out hover:text-rose-200 hover:scale-125"
-          >
-            Articles
-          </Link>
-          <Link
-            href="/bilan"
-            className="transition-transform duration-300 ease-in-out hover:text-rose-200 hover:scale-125"
-          >
-            Bilan
-          </Link>
-        </nav>
-      </div>
+          <nav className="text-pretty mt-3 md:mt-5 lg:mt-0 flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-10 text-base md:text-lg lg:text-xl underline decoration-rose-200 decoration-2 md:decoration-3 underline-offset-4">
+            <Link
+              href="/entreprise"
+              className="transition-transform duration-300 ease-in-out hover:text-rose-200 hover:scale-110 md:hover:scale-125"
+            >
+              Entreprise
+            </Link>
+            <Link
+              href="/articles"
+              className="transition-transform duration-300 ease-in-out hover:text-rose-200 hover:scale-110 md:hover:scale-125"
+            >
+              Articles
+            </Link>
+            <Link
+              href="/bilan"
+              className="transition-transform duration-300 ease-in-out hover:text-rose-200 hover:scale-110 md:hover:scale-125"
+            >
+              Bilan
+            </Link>
+          </nav>
+        </div>
       </ParticleAnimation>
     </section>
   )
