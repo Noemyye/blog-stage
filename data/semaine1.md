@@ -30,6 +30,7 @@ J’ai dû m’habituer à plusieurs aspects techniques :
 ## 🐛 Première mission : correction de bugs CSS
 
 Ma première tâche a été plutôt simple en apparence : **résoudre quelques bugs CSS** sur l’interface de l’application.  
+Du style filtrer une colonne sur un tableau, de manière ascendante et descendante.
 Cette tâche, bien que basique, m’a permis de :
 - Commencer à **explorer le code** sans trop de pression,
 - Observer **l’architecture front-end du projet**,
