@@ -1,3 +1,9 @@
+---
+title: Prise en main et premières responsabilités
+date: 16-06-2025
+description: Le début de cette deuxième semaine marque une progression significative dans ma compréhension de l’environnement de travail.
+---
+
 # 📅 Semaine 4 – Bugs bloquants, leçons de logique et frise CSS
 
 ## 🧠 Débugging intensif : typage & logique React

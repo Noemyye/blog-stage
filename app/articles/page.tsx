@@ -1,8 +1,6 @@
 import WeekList from "@/components/WeekList"
 
-export default function Page() {
-
-
+export default async function Page() {
     return (
         <div>
             <WeekList/>

@@ -7,9 +7,9 @@ export default function Header() {
       className="sticky top-0 z-50 bg-white"
     >
       <ParticleBackground>
-      <div className="container mx-auto flex flex-col items-center justify-between py-10 px-18 lg:flex-row">
-        <Link href={'/'} className="text-balance text-6xl font-bold leading-tight tracking-tighter lg:pr-8 lg:text-8xl whitespace-nowrap">
-          Blog<span className="text-rose-200">.</span>
+      <div className="container mx-auto flex flex-col items-center justify-between py-12 px-18 lg:flex-row">
+        <Link href={'/'} className="text-balance font-bold tracking-tighter text-8xl whitespace-nowrap">
+          Blog<span className="text-rose-200 text-7xl">.</span>
         </Link>
         <nav className="text-pretty mt-5 flex flex-wrap justify-center gap-10 text-xl underline decoration-rose-200 decoration-3 underline-offset-4 lg:mt-0">
           <Link

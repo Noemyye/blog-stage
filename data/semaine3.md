@@ -1,3 +1,9 @@
+---
+title: Prise en main et premières responsabilités
+date: 16-06-2025
+description: Le début de cette deuxième semaine marque une progression significative dans ma compréhension de l’environnement de travail.
+---
+
 # 📅 Semaine 3 – Création du blog, télétravail & premières vraies difficultés techniques
 
 ## 👩‍💻 Conception du blog de stage

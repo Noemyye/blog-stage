@@ -2,23 +2,25 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-const articlesDir = path.join(process.cwd(), 'data')
+const articlesDirectory = path.join(process.cwd(), 'data')
 
 export function getAllArticleSlugs() {
-  return fs.readdirSync(articlesDir)
-    .filter((file) => file.endsWith('.md'))
-    .map((file) => file.replace(/\.md$/, ''))
+  const slugs = fs.readdirSync(articlesDirectory)
+    .filter(filename => filename.endsWith('.md'))
+    .map(filename => filename.replace(/\.md$/, ''))
+  console.log('Slugs:', slugs)
+  return slugs
 }
 
 export function getArticleBySlug(slug: string) {
-  const filePath = path.join(articlesDir, `${slug}.md`)
-  if (!fs.existsSync(filePath)) return null
-
-  const fileContent = fs.readFileSync(filePath, 'utf-8')
-  const { data, content } = matter(fileContent)
-
-  return {
-    frontmatter: data,
-    content,
+  const fullPath = path.join(articlesDirectory, `${slug}.md`)
+  console.log('Reading file:', fullPath)
+  if (!fs.existsSync(fullPath)) {
+    console.warn('File does not exist:', fullPath)
+    return null
   }
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const { data: frontmatter, content } = matter(fileContents)
+  console.log('Frontmatter:', frontmatter)
+  return { frontmatter, content }
 }

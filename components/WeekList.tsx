@@ -1,50 +1,45 @@
-"use client"
-import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import type { Post } from "@/pages/api/weeks";
 
-export default function WeekList() {
-  const [fileNames, setFileNames] = useState<string[]>([])
+// Server-side data fetching
+async function getPosts(): Promise<Post[]> {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/weeks`, {
+    cache: 'no-store'
+  })
+  if (!res.ok) {
+    throw new Error('Failed to fetch posts')
+  }
+  return res.json()
+}
 
-  useEffect(() => {
-    const fetchFiles = async () => {
-      const res = await fetch("/api/weeks")
-      const data = await res.json()
-      setFileNames(data)
-    }
-    fetchFiles()
-  }, [])
+export default async function WeekList() {
+  const posts = await getPosts()
 
   return (
     <div className="mt-5">
       <div className="text-7xl font-bold py-10">Les posts</div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-28">
-        {fileNames.map((name, index) => {
-          const slug = name.replace(".md", "")
-          return (
-            <div key={index} className="flex flex-col gap-4">
-              <Link
-                href={`/articles/${slug}`}
-                className="block rounded-xl shadow overflow-hidden aspect-5/3 group" 
-              >
-                <Image
-                  alt={slug}
-                  width={500} 
-                  height={300} 
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  src={`/img/pic${index + 1}.png`}
-                />
-              </Link>
+        {posts.map(({ slug, title, date, description }, index) => (
+          <div key={slug} className="flex flex-col gap-4">
+            <Link
+              href={`/articles/${slug}`}
+              className="block rounded-xl shadow overflow-hidden aspect-5/3 group" 
+            >
+              <Image
+                alt={title}
+                width={500} 
+                height={300} 
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/img/pic1.png"
+              />
+            </Link>
 
-              {/* Contenu temporaire, à remplacer par du contenu dynamique plus tard */}
-              <div className="text-3xl text-gray-800">Titre de l'article</div>
-              <div className="text-md text-rose-400">Date à insérer</div>
-              <div className="text-xl text-gray-700">
-                Petit extrait de l'article ou introduction (à venir si parsing de frontmatter).
-              </div>
-            </div>
-          )
-        })}
+            <div className="text-3xl text-gray-800">{title}</div>
+            <div className="text-md text-rose-400">{date}</div>
+            <div className="text-xl text-gray-700">{description}</div>
+          </div>
+        ))}
       </div>
     </div>
   )

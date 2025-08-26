@@ -1,3 +1,9 @@
+---
+title: Prise en main et premières responsabilités
+date: 16-06-2025
+description: Le début de cette deuxième semaine marque une progression significative dans ma compréhension de l’environnement de travail.
+---
+
 # 📅 Semaines 5 & 6 – Tags, timeline, dashboard & progression du blog
 
 ## 🧵 Finalisation de la timeline CSS

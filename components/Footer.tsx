@@ -4,18 +4,18 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { FaGithub, FaGitlab, FaLinkedinIn
 } from "react-icons/fa"
+import type { Post } from "@/pages/api/weeks";
 
 export default function Footer() {
-  const [fileNames, setFileNames] = useState<string[]>([])
+  const [posts, setPosts] = useState<Post[]>([])
 
   useEffect(() => {
-    const fetchFiles = async () => {
-      const res = await fetch('/api/weeks')
+    const fetchPosts = async () => {
+      const res = await fetch("/api/weeks")
       const data = await res.json()
-      setFileNames(data)
+      setPosts(data)
     }
-
-    fetchFiles()
+    fetchPosts()
   }, [])
 
   return (
@@ -34,15 +34,11 @@ export default function Footer() {
         <div>
           <h3 className="font-bold text-rose-300 mb-4">Articles</h3>
           <ul className="space-y-2">
-            {fileNames.map((name, index) => {
-              const slug = name.replace('.md', '')
+            {posts.map(({ slug }, index) => {
               const formatted = slug.replace(/semaine(\d+)/i, (_, n) => `Semaine ${n}`)
               return (
-                <li key={index}>
-                  <Link
-                    href={`/articles/${slug}`}
-                    className="hover:underline"
-                  >
+                <li key={slug}>
+                  <Link href={`/articles/${slug}`} className="hover:underline">
                     {formatted}
                   </Link>
                 </li>
@@ -50,6 +46,7 @@ export default function Footer() {
             })}
           </ul>
         </div>
+
 
         <div>
           <h3 className="font-bold text-rose-300 mb-4">Follow Me</h3>
