@@ -47,8 +47,6 @@ Une **bibliothèque de composants UI pour React**, que j’ai trouvée particuli
 - Intégration rapide,
 - Bonne documentation.
 
-J’ai d’ailleurs décidé d’utiliser cette librairie pour créer le site de mon blog personnel.
-
 ### 🔹 [Prisma](https://www.prisma.io/)
 Un **ORM (Object-Relational Mapping)** qui facilite la communication entre l’application et la base de données :
 - Permet d’écrire des requêtes SQL de manière typée et intuitive en TypeScript,

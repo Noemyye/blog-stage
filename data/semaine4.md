@@ -11,7 +11,7 @@ description: Le début de cette deuxième semaine marque une progression signifi
 Cette semaine a commencé avec **un vrai casse-tête technique**. Je travaillais encore sur la tâche démarrée la semaine précédente (dropdown dynamique + WebSocket), et j’étais bloquée sur :
 
 - Des **problèmes de typage** TypeScript (correspondance type/valeur)
-- Une confusion liée à un `console.log` qui s’exécutait **avant la mise à jour de l’état**, ce qui faussait mes vérifications
+- Une confusion liée à un `console.log` en dehors d'un useEffect qui s’exécutait **avant la mise à jour de l’état**, ce qui faussait mes vérifications
 
 J’ai **voulu persévérer seule**, sans demander d’aide, pour apprendre par moi-même.  
 Résultat : une **après-midi entière à m’arracher les cheveux** ! 😅
@@ -19,13 +19,15 @@ Résultat : une **après-midi entière à m’arracher les cheveux** ! 😅
 Mais au final, cette erreur "bête", typique des débutants avec React (penser que l’état est à jour alors qu’il ne l’est pas encore), m’a laissé **une vraie leçon gravée dans la tête**.  
 Je ne la referai plus !
 
+Erreur de ma part de ne pas avoir demandé de l’aide également. Le fait d’avoir travaillé presque deux ans en solo me laisse des traces et rend difficile pour moi de demander de l’aide quand j’en ai besoin.
+
 ---
 
 ## 🔁 Fin de sprint
 
 Cette semaine marquait également **la fin du sprint**.
 
-> 📌 Un **sprint** chez Haryon dure 3 semaines. C’est une période dans laquelle chaque membre fixe des objectifs, que l’on essaie de compléter avant la fin.
+> 📌 Un **sprint** chez Haryon dure 3 semaines. C’est une période dans laquelle chaque membre fixe des objectifs, que l’on essaie de compléter en 3 semaines.
 
 J’ai aimé voir la **progression de chacun**, ainsi que les retours croisés lors des réunions de fin de sprint. Cela permet de **prendre du recul sur ce qu’on a accompli**, ce qui reste à faire, et où l’on progresse techniquement.
 
@@ -38,7 +40,7 @@ On m’a confié la tâche de concevoir **une frise chronologique** permettant d
 
 - J’ai pris en charge toute **la mise en forme CSS**
 - Utilisation de **Tailwind CSS** pour styliser les éléments
-- Documentation + aide ponctuelle avec **IA v0** (outil interne d’assistance AI chez Haryon)
+- Documentation + aide ponctuelle avec **IA v0** qui est basé sur la lib shadcn
 
 Je dois avouer que **le CSS reste l’une de mes parties préférées**. Styliser, aligner, jouer avec les espaces et les couleurs, c’est un domaine dans lequel je me sens à l’aise et créative.
 

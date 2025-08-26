@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
@@ -19,15 +19,31 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer className="bg-zinc-900 text-white py-12 px-6 mt-12 shadow-inner">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+    <footer className="bg-zinc-900 text-white py-8 md:py-12 px-4 md:px-6 mt-8 md:mt-12 shadow-inner">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 text-sm">
         <div>
-          <h3 className="font-bold text-rose-300 mb-4">Entreprise</h3>
+          <h3 className="font-bold text-rose-300 mb-3 md:mb-4">Entreprise</h3>
           <ul className="space-y-2">
-            <li><Link href="#" className="hover:underline">L'équipe</Link></li>
-            <li><Link href="#" className="hover:underline">Environnement</Link></li>
-            <li><Link href="#" className="hover:underline">Mon intervention</Link></li>
-            <li><Link href="#" className="hover:underline">Contact</Link></li>
+            <li>
+              <Link href="#" className="hover:underline">
+                L'équipe
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:underline">
+                Environnement
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:underline">
+                Mon intervention
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:underline">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -55,11 +71,11 @@ export default function Footer() {
             <Link href="https://github.com/Noemyye"><FaGithub className="w-5 h-5 hover:text-rose-300"/></Link>
             <Link href="https://gitlab.com/noemie.dblc"><FaGitlab className="w-5 h-5 hover:text-rose-300"/></Link>
             <a
-                href="/CV-noemie-dublanc.png"
-                download
-                className="hover:underline text-lg font-bold text-white hover:text-rose-300"
+              href="/CV-noemie-dublanc.png"
+              download
+              className="hover:underline text-base md:text-lg font-bold text-white hover:text-rose-300"
             >
-                CV
+              CV
             </a>
           </div>
         </div>

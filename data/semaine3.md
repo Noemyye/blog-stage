@@ -53,7 +53,7 @@ Les points techniques :
 
 - **Utilisation des WebSockets** pour récupérer les données en live
 - Traitement de **fichiers JSON** en backend
-- Intégration avec une autre app (je croyais au départ qu’elle faisait tout le back)
+- Intégration avec une autre app
 - Ce qui a été le plus complexe : **la gestion du typage**, des `interfaces` TypeScript variées, et leur lien avec le reste du projet
 
 C’est la première tâche où j’ai **réellement dû creuser le système de typage et la structure du backend**. J’ai mis du temps, mais c’est très formateur.
@@ -64,13 +64,12 @@ C’est la première tâche où j’ai **réellement dû creuser le système de 
 
 Jeudi soir, sortie d’équipe au bar 🍺  
 Sortie conviviale (et un peu arrosée), qui m’a permis de **m’intégrer davantage et de discuter en dehors du cadre pro**.  
-Petit à petit, je me sens **de plus en plus à ma place**, et j’apprécie sincèrement la dynamique d’équipe.
+Petit à petit, je me sens **de plus en plus à l'aise**, et j’apprécie sincèrement la dynamique d’équipe.
 
 ---
 
 ## ✅ Bilan de la semaine
 
-- ✅ Première utilisation avancée de shadcn/ui & déploiement sur Vercel  
 - ✅ Tâche technique challengeante avec WebSocket & typage  
 - ✅ Télétravail testé → préférence pour la vie en open space  
 - ✅ Bonne dynamique d’intégration dans l’équipe  

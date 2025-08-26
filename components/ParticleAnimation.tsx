@@ -11,13 +11,13 @@ interface ParticleBackgroundProps {
   particleColor?: string
 }
 
-export default function ParticleBackground({
+export default function ParticleAnimation({
   children,
   className,
   particleCount = 50,
-  particleSize = 3,
-  particleSpeed = 0.7,
-  particleColor = "rgba(254, 205, 211, 1)",
+  particleSize = 5,
+  particleSpeed = 1,
+  particleColor = "rgb(255, 205, 215)",
 }: ParticleBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
