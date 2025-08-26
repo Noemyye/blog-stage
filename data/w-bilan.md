@@ -1,3 +1,9 @@
+---
+title: Mon bilan chez Haryon
+date: 09-06-2025
+description: Expérience apprise dans l'équipe de Haryon !
+---
+
 ### 1. **Impressions générales**
 Mon stage chez **Haryon** a été une expérience extrêmement formatrice, tant sur le plan technique que professionnel. Dès les premiers jours, j’ai été plongée dans un environnement de travail exigeant mais bienveillant, avec une équipe disponible pour m’accompagner dans ma montée en compétences.  
 Le rythme, l’organisation en sprint, et la diversité des tâches m’ont permis de découvrir le fonctionnement réel d’une start-up tech spécialisée en cybersécurité.

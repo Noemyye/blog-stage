@@ -1,3 +1,9 @@
+---
+title: TanStack Table et intégration Figma
+date: 20-07-2025 
+description: Découverte de la lib TanStack Table pour la gestion des tableaux, création d'un panneau déroulant avec une timeline
+---
+
 # 📅 Semaine 7
 
 ## 📄 Avancement du rapport de stage

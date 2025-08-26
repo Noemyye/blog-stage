@@ -1,3 +1,9 @@
+---
+title: Pop-ups et création d'un composant
+date: 27-07-2025 
+description: Réunion en prévision de l'absence d'Antoine, création d'un accordion réutilisable
+---
+
 # 📅 Semaine 8
 
 ## 📂 Suite du panneau déroulant

@@ -1,7 +1,7 @@
 ---
-title: Prise en main et premières responsabilités
-date: 16-06-2025
-description: Le début de cette deuxième semaine marque une progression significative dans ma compréhension de l’environnement de travail.
+title: Deux semaines en 1 articles
+date: 06-07-2025 / 13-07-2025 
+description: Semaine coupée car je suis à l'armée pendant 4 jours, reprise par la suite d'un filtre de tags
 ---
 
 # 📅 Semaines 5 & 6 – Tags, timeline, dashboard & progression du blog
@@ -9,7 +9,7 @@ description: Le début de cette deuxième semaine marque une progression signifi
 ## 🧵 Finalisation de la timeline CSS
 
 En début de semaine 5, j’ai terminé la mise en forme CSS de la **frise chronologique** commencée précédemment.  
-J’ai particulièrement soigné l’aspect visuel avec **Tailwind CSS**, pour offrir un rendu clair, responsive et esthétique. Le travail sur ce composant m’a permis de renforcer mes compétences en layout CSS avancé, notamment sur les grilles, les pseudo-éléments et l’espacement dynamique. Pas grand chose non plus car j'étais parti en pleine semaine à l'armée.
+J’ai particulièrement soigné l’aspect visuel avec **Tailwind CSS**, pour offrir un rendu clair, responsive et esthétique. Le travail sur ce composant m’a permis de renforcer mes compétences en layout CSS avancé, notamment sur les grilles, les pseudo-éléments et l’espacement dynamique. Pas grand chose non plus car j'étais partie en pleine semaine à l'armée.
 
 ---
 

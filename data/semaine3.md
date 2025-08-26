@@ -1,7 +1,7 @@
 ---
-title: Prise en main et premières responsabilités
-date: 16-06-2025
-description: Le début de cette deuxième semaine marque une progression significative dans ma compréhension de l’environnement de travail.
+title: Début du blog + affichage dynamique
+date: 23-06-2025
+description: Semaine plus relachée commencement de la conception du blog, premier jour de télétravail, suivi RH...
 ---
 
 # 📅 Semaine 3 – Création du blog, télétravail & premières vraies difficultés techniques
