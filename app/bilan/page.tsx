@@ -14,7 +14,7 @@ export default function BilanPage() {
   const [sections, setSections] = useState<Section[]>([]);
 
   useEffect(() => {
-    fetch('/api/bilan')
+    fetch('/api/w-bilan')
       .then(res => res.json())
       .then(data => {
         const content = data.content || '';
@@ -38,60 +38,48 @@ export default function BilanPage() {
   }, []);
 
   return (
-    <div>
-      <div className="text-2xl md:text-4xl lg:text-6xl font-bold pb-6">Bilan de stage</div>
-      {sections.map((section, idx) => (
-        <article
-          key={idx}
-          className={`px-25 prose lg:prose-xl pb-12 bg-rose-50${
-            section.style === 'rose' ? 'prose-rose bg-rose-50' : 'prose-rose bg-white'
-          }`}
-        >
-          <ReactMarkdown>{section.content}</ReactMarkdown>
-        </article>
-      ))}
-      <div className='border mb-12'></div>
-
-      <div >
-        <div className="text-xl md:text-3xl lg:text-5xl font-bold pb-6 md:pb-10">Plus de posts</div>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-28'>
-           <div className="flex flex-col gap-3 md:gap-4">
-              <Link href={`/articles/semaine1`} className="block rounded-xl shadow overflow-hidden aspect-[5/3] group">
-                <Image
-                  alt='Semaine 1'
-                  width={500}
-                  height={300}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  src={`/img/pic1.png`}
-                />
-              </Link>
-
-              <div className="text-xl md:text-2xl lg:text-3xl text-gray-800">Titre de l'article</div>
-              <div className="text-sm md:text-md text-rose-300 font-bold">Date à insérer</div>
-              <div className="text-base md:text-lg lg:text-xl text-gray-700">
-                Petit extrait de l'article ou introduction (à venir si parsing de frontmatter).
+    <div className="px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold pb-4 sm:pb-6 md:pb-8 lg:pb-10 bg-gradient-to-r from-rose-100 to-pink-100 p-6 sm:p-8 rounded-xl border-l-4 border-rose-400 shadow-lg">
+        Bilan de stage
+      </div>
+      
+      <div className="space-y-8 sm:space-y-12">
+        {sections.map((section, idx) => (
+          <article
+            key={idx}
+            className={`relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl ${
+              section.style === 'rose' 
+                ? 'bg-gradient-to-br from-rose-50 to-pink-50 border border-rose-200' 
+                : 'bg-white border border-gray-200'
+            }`}
+          >
+            {/* Decorative top border */}
+            <div className={`h-1 w-full ${
+              section.style === 'rose' 
+                ? 'bg-gradient-to-r from-rose-400 to-pink-400' 
+                : 'bg-gradient-to-r from-gray-300 to-gray-400'
+            }`}></div>
+            
+            <div className="p-6 sm:p-8 lg:p-10">
+              <div className={`prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl max-w-none ${
+                section.style === 'rose' ? 'prose-rose' : 'prose-gray'
+              }`}>
+                <ReactMarkdown>{section.content}</ReactMarkdown>
               </div>
             </div>
-             <div className="flex flex-col gap-3 md:gap-4">
-              <Link href={`/articles/semaine2`} className="block rounded-xl shadow overflow-hidden aspect-[5/3] group">
-                <Image
-                  alt='Semaine 2'
-                  width={500}
-                  height={300}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  src={`/img/pic2.png`}
-                />
-              </Link>
-
-              <div className="text-xl md:text-2xl lg:text-3xl text-gray-800">Titre de l'article</div>
-              <div className="text-sm md:text-md text-rose-300 font-bold">Date à insérer</div>
-              <div className="text-base md:text-lg lg:text-xl text-gray-700">
-                Petit extrait de l'article ou introduction (à venir si parsing de frontmatter).
-              </div>
-            </div>
-        </div>
-
-
+            
+            {/* Decorative bottom accent */}
+            <div className={`h-0.5 w-full opacity-30 ${
+              section.style === 'rose' 
+                ? 'bg-gradient-to-r from-rose-300 to-pink-300' 
+                : 'bg-gradient-to-r from-gray-200 to-gray-300'
+            }`}></div>
+          </article>
+        ))}
+      </div>
+      
+      <div className="mt-12 sm:mt-16">
+        <div className="h-px bg-gradient-to-r from-transparent via-rose-300 to-transparent"></div>
       </div>
     </div>
   );

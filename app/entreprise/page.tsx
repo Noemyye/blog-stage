@@ -22,23 +22,23 @@ export default function Page() {
     ["Yani Madebos", "UX Designer", "Alternant"],
   ]
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col gap-8 sm:gap-12 md:gap-16 lg:gap-20 px-4 sm:px-6 md:px-8 lg:px-12">
       {/* Titre principal avec animation d'entrée */}
-      <div className="text-5xl font-bold animate-fade-in-up opacity-0 animation-delay-200">
+      <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in-up opacity-0 animation-delay-200">
         Présentation de l'entreprise
       </div>
 
       {/* Section présentation avec animations staggered */}
-      <section className="flex gap-15 h-60 animate-fade-in-up opacity-0 animation-delay-400">
+      <section className="flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-15 min-h-60 animate-fade-in-up opacity-0 animation-delay-400">
           <Image
             src="/img/logo-haryon.svg"
             alt="Logo Haryon"
             width={600}
             height={240}
-            className="bg-[#111A23] rounded-xl p-6 shadow-lg"
+            className="bg-[#111A23] rounded-xl p-4 sm:p-6 shadow-lg "
           />
 
-        <ul className="space-y-3 text-lg leading-relaxed">
+        <ul className="space-y-2 sm:space-y-3 text-base sm:text-lg leading-relaxed">
           {[
             { label: "Nom complet :", value: "Haryon (anciennement Knock Knock)" },
             { label: "Création :", value: "2020" },
@@ -63,31 +63,31 @@ export default function Page() {
               key={index}
               style={{ animationDelay: `${600 + index * 100}ms` }}
             >
-              <strong className="rounded-full px-3 py-1 bg-teal-500/40 hover:bg-teal-500/60 transition-all duration-200 hover:scale-105">
+              <strong className="rounded-full px-2 sm:px-3 py-1 bg-teal-500/40 hover:bg-teal-500/60 transition-all duration-200 hover:scale-105 text-sm sm:text-base">
                 {item.label}
               </strong>{" "}
-              {item.value}
+              <span className="text-sm sm:text-base">{item.value}</span>
             </li>
           ))}
         </ul>
       </section>
 
       {/* Mission de l'entreprise avec animation de pulsation */}
-      <Card className="shadow-lg gap-5 border border-slate-200 text-center animate-fade-in-up opacity-0 animation-delay-800 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+      <Card className="shadow-lg gap-3 sm:gap-5 border border-slate-200 text-center animate-fade-in-up opacity-0 animation-delay-800 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
         <CardHeader className="flex justify-center">
-          <CardTitle className="bg-teal-100 p-4 rounded-full animate-pulse-slow hover:animate-spin-slow transition-all duration-300">
-            <MdSecurity className="text-4xl text-teal-500" />
+          <CardTitle className="bg-teal-100 p-3 sm:p-4 rounded-full animate-pulse-slow hover:animate-spin-slow transition-all duration-300">
+            <MdSecurity className="text-2xl sm:text-3xl md:text-4xl text-teal-500" />
           </CardTitle>
         </CardHeader>
-        <CardTitle className="text-3xl font-bold text-slate-800 animate-fade-in opacity-0 animation-delay-1000">
+        <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 animate-fade-in opacity-0 animation-delay-1000">
           Mission de l'entreprise
         </CardTitle>
-        <CardDescription className="bg-gradient-to-r from-teal-600 to-teal-300 text-white rounded-xl p-8 animate-gradient-x">
-          <p className="text-2xl font-semibold italic transition-all duration-300 hover:scale-110">
+        <CardDescription className="bg-gradient-to-r from-teal-600 to-teal-300 text-white rounded-xl p-4 sm:p-6 md:p-8 animate-gradient-x">
+          <p className="text-lg sm:text-xl md:text-2xl font-semibold italic transition-all duration-300 hover:scale-110">
             "Pentesters skills in Defenders hands"
           </p>
         </CardDescription>
-        <CardContent className="text-md text-slate-600 leading-relaxed max-w-4xl mx-auto animate-fade-in opacity-0 animation-delay-1200">
+        <CardContent className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed max-w-4xl mx-auto animate-fade-in opacity-0 animation-delay-1200">
           Donner aux défenseurs les moyens les plus avancés issus de la cyber offensive, en leur permettant de
           bénéficier en continu des compétences, des techniques et de la R&D des pentesters humains.
         </CardContent>
@@ -95,13 +95,13 @@ export default function Page() {
 
       {/* Solution avec animation de rebond */}
       <Card className="bg-gradient-to-r from-teal-50 to-cyan-50 border border-teal-300 animate-fade-in-up opacity-0 animation-delay-1400 hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-        <div className="flex items-center justify-center">
-          <div className="bg-teal-100 p-4 rounded-full mr-4 animate-bounce-slow hover:animate-spin transition-all duration-300">
-            <MdRocket className="text-4xl text-teal-500" />
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="bg-teal-100 p-3 sm:p-4 rounded-full animate-bounce-slow hover:animate-spin transition-all duration-300">
+            <MdRocket className="text-2xl sm:text-3xl md:text-4xl text-teal-500" />
           </div>
-          <h2 className="text-3xl font-bold text-slate-800">Leur solution</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800">Leur solution</h2>
         </div>
-        <p className="text-lg text-slate-700 leading-relaxed text-center max-w-4xl mx-auto animate-fade-in opacity-0 animation-delay-1600">
+        <p className="text-base sm:text-lg md:text-xl text-slate-700 leading-relaxed text-center max-w-4xl mx-auto animate-fade-in opacity-0 animation-delay-1600 mt-4">
           Une plateforme on-premise d'orchestration et d'automatisation de tests d'intrusion, qui relie les savoir-faire
           des pentesters aux besoins opérationnels des défenseurs.
         </p>
@@ -109,22 +109,22 @@ export default function Page() {
 
       {/* Organisation interne avec animations staggered */}
       <Card className="animate-fade-in-up opacity-0 animation-delay-1800 hover:shadow-lg transition-all duration-500">
-        <CardHeader className="text-3xl font-bold text-slate-800 flex items-center gap-3">
+        <CardHeader className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 flex items-center gap-2 sm:gap-3">
           <BsCalendar2Week className="text-teal-500 animate-pulse hover:animate-spin transition-all duration-300" />
           Organisation interne
         </CardHeader>
 
-        <CardContent className="grid md:grid-cols-2 gap-8">
-          <div className="bg-slate-50 rounded-xl p-6 transform transition-all duration-500 hover:scale-105 hover:bg-slate-100 animate-slide-in-left opacity-0 animation-delay-2000">
-            <h3 className="text-xl font-semibold text-slate-800 mb-4 flex items-center gap-2">
+        <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <div className="bg-slate-50 rounded-xl p-4 sm:p-6 transform transition-all duration-500 hover:scale-105 hover:bg-slate-100 animate-slide-in-left opacity-0 animation-delay-2000">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-slate-800 mb-3 sm:mb-4 flex items-center gap-2">
               <FaTerminal className="text-teal-500 animate-pulse" /> Les pôles
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               {["Développement Fullstack", "Développement Cyber", "UX/UI Design", "CTO / CEO / RH"].map(
                 (pole, index) => (
                   <li
                     key={index}
-                    className="flex items-center gap-3 text-slate-700 animate-slide-in-right opacity-0 hover:translate-x-2 transition-all duration-300"
+                    className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-slate-700 animate-slide-in-right opacity-0 hover:translate-x-2 transition-all duration-300"
                     style={{ animationDelay: `${2200 + index * 100}ms` }}
                   >
                     <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
@@ -135,11 +135,11 @@ export default function Page() {
             </ul>
           </div>
 
-          <div className="bg-slate-50 rounded-xl p-6 transform transition-all duration-500 hover:scale-105 hover:bg-slate-100 animate-slide-in-right opacity-0 animation-delay-2000">
-            <h3 className="text-xl font-semibold text-slate-800 mb-4 flex items-center gap-2">
+          <div className="bg-slate-50 rounded-xl p-4 sm:p-6 transform transition-all duration-500 hover:scale-105 hover:bg-slate-100 animate-slide-in-right opacity-0 animation-delay-2000">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-slate-800 mb-3 sm:mb-4 flex items-center gap-2">
               <FaRegWindowRestore className="text-teal-500 animate-pulse" /> Méthodes de travail
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               {[
                 "Travail en Sprint de 3 semaines",
                 "Réunions : daily meetings, weekly, sprint review",
@@ -148,7 +148,7 @@ export default function Page() {
               ].map((method, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-3 text-slate-700 animate-slide-in-left opacity-0 hover:translate-x-2 transition-all duration-300"
+                  className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-slate-700 animate-slide-in-left opacity-0 hover:translate-x-2 transition-all duration-300"
                   style={{ animationDelay: `${2600 + index * 100}ms` }}
                 >
                   <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
@@ -162,19 +162,19 @@ export default function Page() {
 
       {/* Équipe avec animation de tableau */}
       <section className="animate-fade-in-up opacity-0 animation-delay-3000">
-        <div className="flex items-center mb-4">
-          <div className="bg-teal-100 p-3 rounded-full mr-4 animate-bounce-slow hover:animate-spin transition-all duration-300">
-            <FaIdCardAlt className="text-3xl text-teal-500" />
+        <div className="flex flex-col sm:flex-row items-center mb-4 gap-2 sm:gap-4">
+          <div className="bg-teal-100 p-2 sm:p-3 rounded-full animate-bounce-slow hover:animate-spin transition-all duration-300">
+            <FaIdCardAlt className="text-2xl sm:text-3xl text-teal-500" />
           </div>
-          <h2 className="text-3xl font-semibold text-slate-800">L'équipe</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-800">L'équipe</h2>
         </div>
         <div className="overflow-x-auto">
-          <table className="min-w-full table-auto border border-teal-300 shadow-lg rounded-lg overflow-hidden">
+          <table className="min-w-full table-auto border border-teal-300 shadow-lg rounded-lg overflow-hidden text-xs sm:text-sm md:text-base">
             <thead>
               <tr className="bg-teal-100 text-slate-700">
-                <th className="px-4 py-2 text-left">Nom</th>
-                <th className="px-4 py-2 text-left">Rôle</th>
-                <th className="px-4 py-2 text-left">Statut</th>
+                <th className="px-2 sm:px-4 py-2 text-left">Nom</th>
+                <th className="px-2 sm:px-4 py-2 text-left">Rôle</th>
+                <th className="px-2 sm:px-4 py-2 text-left">Statut</th>
               </tr>
             </thead>
             <tbody className="text-gray-800">
@@ -184,9 +184,9 @@ export default function Page() {
                   className="even:bg-teal-50 hover:bg-teal-100 transition-all duration-300 transform animate-fade-in opacity-0"
                   style={{ animationDelay: `${3200 + i * 50}ms` }}
                 >
-                  <td className="px-4 py-2">{nom}</td>
-                  <td className="px-4 py-2">{role}</td>
-                  <td className="px-4 py-2">
+                  <td className="px-2 sm:px-4 py-2">{nom}</td>
+                  <td className="px-2 sm:px-4 py-2">{role}</td>
+                  <td className="px-2 sm:px-4 py-2">
                     <span
                       className={`px-2 py-1 rounded-full text-xs font-medium ${
                         statut === "Employé" ? "bg-green-100 text-green-800" : "bg-blue-100 text-blue-800"
@@ -204,12 +204,12 @@ export default function Page() {
 
       {/* Environnement de travail avec animations de cartes */}
       <Card className="shadow-lg border border-slate-200 animate-fade-in-up opacity-0 animation-delay-3800 hover:shadow-2xl transition-all duration-500">
-        <CardHeader className="text-3xl font-bold text-slate-800 flex items-center gap-3">
+        <CardHeader className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 flex items-center gap-2 sm:gap-3">
           <FaMousePointer className="text-teal-500 animate-pulse hover:animate-bounce transition-all duration-300" />
           Environnement de travail
         </CardHeader>
 
-        <CardContent className="grid sm:grid-cols-2 gap-6">
+        <CardContent className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           {[
             {
               icon: FaRoute,
@@ -233,13 +233,13 @@ export default function Page() {
           ].map((item, index) => (
             <div
               key={index}
-              className="bg-slate-50 rounded-xl p-6 flex items-center gap-4 transform transition-all duration-500 hover:shadow-lg animate-slide-in-up opacity-0"
+              className="bg-slate-50 rounded-xl p-4 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 transform transition-all duration-500 hover:shadow-lg animate-slide-in-up opacity-0"
               style={{ animationDelay: `${4000 + index * 150}ms` }}
             >
-              <div className="bg-teal-100 p-3 rounded-lg flex-shrink-0 transition-all duration-300 hover:scale-115 hover:rotate-12 hover:bg-teal-200">
-                <item.icon className="text-xl text-teal-500" />
+              <div className="bg-teal-100 p-2 sm:p-3 rounded-lg flex-shrink-0 transition-all duration-300 hover:scale-115 hover:rotate-12 hover:bg-teal-200">
+                <item.icon className="text-lg sm:text-xl text-teal-500" />
               </div>
-              <p className="text-slate-700 leading-relaxed">{item.text}</p>
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{item.text}</p>
             </div>
           ))}
         </CardContent>
@@ -247,11 +247,11 @@ export default function Page() {
 
       {/* Stack technique avec animation finale */}
       <section className="animate-fade-in-up opacity-0 animation-delay-4600">
-        <div className="flex items-center mb-4">
-          <div className="bg-teal-100 p-3 rounded-full mr-4">
-            <FaCubesStacked className="text-3xl text-teal-500" />
+        <div className="flex flex-col sm:flex-row items-center mb-4 gap-2 sm:gap-4">
+          <div className="bg-teal-100 p-2 sm:p-3 rounded-full">
+            <FaCubesStacked className="text-2xl sm:text-3xl text-teal-500" />
           </div>
-          <h2 className="text-3xl font-semibold text-slate-800">Stack technique</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-800">Stack technique</h2>
         </div>
         <div className="animate-fade-in opacity-0 animation-delay-4800">
           <TechStack />

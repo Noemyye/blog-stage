@@ -1,3 +1,9 @@
+---
+title: Absence de Antoine
+date: 03-08-2025 
+description: Semaine d'absence de mon maitre de stage, avancement sur le travail donné, feedback utilisateur
+---
+
 # 📅 Semaine 9
 
 ## 🖼 Travail sur les pop-ups

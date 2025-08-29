@@ -51,15 +51,15 @@ const techStack = [
 
 export default function TechStack() {
   return (
-    <div className="grid gap-6 md:grid-cols-2">
+    <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {techStack.map((tech) => (
-        <Card key={tech.category} className="p-6">
-          <h3 className="text-lg font-semibold mb-4">{tech.category}</h3>
-          <div className="flex flex-wrap gap-2 ">
+        <Card key={tech.category} className="p-4 sm:p-6">
+          <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">{tech.category}</h3>
+          <div className="flex flex-wrap gap-2">
             {tech.skills.map(({ name, icon }) => (
               <span
                 key={name}
-                className="inline-flex items-center gap-2 rounded-md bg-teal-300/20 px-2 py-1 text-sm font-medium text-primary ring-1 ring-inset ring-teal-400/30 transition-all duration-200 hover:scale-105"
+                className="inline-flex items-center gap-1 sm:gap-2 rounded-md bg-teal-300/20 px-2 py-1 text-xs sm:text-sm font-medium text-primary ring-1 ring-inset ring-teal-400/30 transition-all duration-200 hover:scale-105"
               >
                 {icon} {name}
               </span>

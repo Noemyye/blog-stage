@@ -13,10 +13,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   if (!article) return notFound()
 
   return (
-    <article className="prose mx-auto p-8">
-      <h1>{article.frontmatter.title}</h1>
-      <p className="text-sm text-gray-500">{article.frontmatter.date}</p>
-      <MDXRemote source={article.content} />
+    <article className="prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl mx-auto p-4 sm:p-6 md:p-8 max-w-4xl">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4">{article.frontmatter.title}</h1>
+      <p className="text-xs sm:text-sm md:text-base text-gray-500 mb-6 sm:mb-8">{article.frontmatter.date}</p>
+      <div className="prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl max-w-none">
+        <MDXRemote source={article.content} />
+      </div>
     </article>
   )
 }

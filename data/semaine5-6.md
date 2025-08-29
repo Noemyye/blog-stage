@@ -1,5 +1,5 @@
 ---
-title: Deux semaines en 1 articles
+title: Deux semaines en 1 article
 date: 06-07-2025 / 13-07-2025 
 description: Semaine coupée car je suis à l'armée pendant 4 jours, reprise par la suite d'un filtre de tags
 ---
